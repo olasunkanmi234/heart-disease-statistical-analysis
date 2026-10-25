@@ -1,0 +1,207 @@
+---
+title: 'HEART DISEASE STATTISCAL ANALYSIS '
+output:
+  word_document: default
+  pdf_document: default
+date: "2022-11-22"
+STUDENT ID: 100598874
+STUDENT NAME: OLASUNKANMI DAVID ADISA
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+#DATA IMPORT
+
+```{r}
+heart <- read.csv("C:/Users/david/Downloads/heart.csv")
+```
+
+
+#PART ONE:    DESCRIPTIVE STATISTICS
+
+1.    First 6 observations
+
+```{r}
+head(heart)
+```
+
+
+2.    Structure of dataset
+
+```{r}
+str(heart)
+```
+
+
+3.    Summary of all the data
+
+```{r}
+summary(heart)
+```
+
+
+4.    Histogram rep of age
+
+```{r}
+hist(heart$sex)
+```
+
+
+5.    Standard deviation of sex
+
+```{r}
+sd(heart$sex)
+```
+
+
+6.    Box plots of (age) and (trestbps)
+
+```{r}
+boxplot(heart$thalach ~ heart$sex)
+```
+
+
+#PART TWO:    NORMALITY TEST
+
+```{r}
+shapiro.test(heart$chol)
+```
+
+```{r}
+shapiro.test(heart$sex)
+```
+
+```{r}
+boxplot(heart)
+```
+
+
+#PART THREE:    HYPOTHESIS TEST (NON-PARAMETRIC)
+
+1.    Hypothesis test between (sex) and (thalach)
+
+```{r}
+wilcox.test(heart$sex, heart$thalach, paired=TRUE) 
+```
+2.    Hypothesis test between (sex) and (chol)
+
+```{r}
+wilcox.test(heart$sex, heart$chol, paired=TRUE)
+```
+
+3.    Hypothesis test between (sex) and (trestbps)
+
+```{r}
+wilcox.test(heart$sex, heart$trestbps, paired=TRUE)
+```
+
+
+#PART FOUR:   ANOVA (NON PARAMETRIC)
+
+ANOVA test between group of (sex) and (thalach)
+
+```{r}
+kruskal.test(thalach ~ sex,
+  data = heart
+)
+```
+
+```{r}
+anova(lm(heart$thalach ~ heart$sex))
+```
+
+
+```{r}
+library(ggstatsplot)
+
+ggbetweenstats(
+  data = heart,
+  x = sex,
+  y = thalach,
+  type = "nonparametric", # ANOVA or Kruskal-Wallis
+  plot.type = "box",
+  pairwise.comparisons = TRUE,
+  pairwise.display = "significant",
+  centrality.plotting = FALSE,
+  bf.message = FALSE
+)
+```
+
+
+#PART FIVE:   CHI- SQUARE OF INDEPENDENCE
+
+Chi-square test between (sex) and (chol)
+
+```{r}
+test <- chisq.test(table(heart$sex, heart$chol))
+test
+```
+
+#PART SIX:    CORRELATION (NON-PARAMETRIC TEST)
+
+1.    correlation test between (age) and (thalach)
+
+```{r}
+cor(heart$age, heart$thalach)
+```
+```{r}
+plot(heart$age, heart$thalach)
+```
+
+
+2.    correlation test between (age) and (tresbps)
+
+```{r}
+cor(heart$age, heart$trestbps)
+```
+
+
+```{r}
+plot(heart$age, heart$trestbps)
+```
+
+
+3.    correlation test between (age) and (chol)
+
+```{r}
+cor(heart$age, heart$chol)
+```
+
+```{r}
+plot(heart$age, heart$chol)
+```
+
+
+4.    correlation test between all variables
+
+```{r}
+cor(heart)
+plot(heart)
+```
+
+
+
+#PART SEVEN:    LINEAR REGRESSION
+
+
+1.    Linear regression between (age) and (chol)
+
+```{r}
+plot(heart$chol, heart$age)
+model<-lm(heart$age~heart$chol)
+abline(model, col="red", lwd =2)
+summary(model)
+cor.test(heart$chol, heart$age)
+```
+
+2.    Linear regression between (age) and (trestbps)
+
+```{r}
+plot(heart$age, heart$trestbps)
+model<-lm(heart$trestbps~heart$age)
+abline(model, col="red", lwd =2)
+summary(model)
+cor.test(heart$age, heart$trestbps)
+```
