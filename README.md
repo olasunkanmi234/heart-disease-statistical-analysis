@@ -6,6 +6,12 @@ This project explores a heart disease dataset using R and statistical techniques
 
 The dataset contains **1,025 observations and 14 variables**.
 
+![Maximum Heart Rate](images/thalach.png)
+
+![Resting Blood Pressure](images/trestbps.png)
+
+![Cholesterol](images/chol.png)
+
 ## Tools and Technologies
 
 - R
