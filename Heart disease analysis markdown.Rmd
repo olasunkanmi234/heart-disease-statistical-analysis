@@ -1,0 +1,70 @@
+---
+Title: "Heart Disease Analysis Markdown
+Author: "Olasunkanmi Adisa"
+Date: "20-01-2026"
+Output: html_document
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+1. LOAD THE DATA SET
+
+heart <- read.csv("C:/Users/OAdisa/Desktop/heart.csv")
+
+
+2. EXPLORE THE DATA
+
+```{r heart}
+head(heart)
+```
+
+
+3. DESCRIPTIVE STATISTICS
+
+```{r heart}
+mean(heart$age)
+mean(heart$chol)
+mean(heart$thalach)
+
+sd(heart$age)
+```
+
+
+4. CORRELATION ANALYSIS
+
+```{r heart}
+cor.test(heart$age, heart$thalach)
+cor.test(heart$age, heart$trestbps)
+cor.test(heart$age, heart$chol)
+```
+
+
+5. VISUALISATION
+
+```{r heart}
+plot(heart$age, heart$thalach,
+     main = "Age vs Maximum Heart Rate",
+     xlab = "Age", ylab = "Maximum Heart Rate")
+
+plot(heart$age, heart$trestbps,
+     main = "Age vs Resting Blood Pressure",
+     xlab = "Age", ylab = "Resting Blood Pressure")
+
+plot(heart$age, heart$chol,
+     main = "Age vs Cholesterol",
+     xlab = "Age", ylab = "Cholesterol")
+```
+
+
+6. COMPARE HEART RATE BY SEX
+
+```{r heart}
+boxplot(thalach ~ sex, data = heart,
+        main = "Maximum Heart Rate by Sex",
+        xlab = "Sex", ylab = "Maximum Heart Rate")
+
+wilcox.test(thalach ~ sex, data = heart)
+```
