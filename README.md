@@ -22,67 +22,26 @@ The project involved:
 - Calculating descriptive statistics.
 - Creating scatter plots to examine relationships between variables.
 - Using Pearson correlation to measure the strength and direction of relationships.
-- Applying linear regression to examine relationships between selected variables.
 - Creating a boxplot to compare maximum heart rate between sex groups.
 
 ## Key Findings and Results
 
-### 1. Age vs Maximum Heart Rate
+### Relationship Between Age and Health Measurements
 
-**Correlation coefficient: -0.3902**
+# 1. Age vs Maximum Heart Rate
+The scatter plot shows a downward trend between age and maximum heart rate. This is supported by a Pearson correlation coefficient of -0.3902, indicating a moderate negative relationship. This suggests that older individuals in the dataset generally tend to have lower maximum heart rates.
 
-The analysis identified a moderate negative relationship between age and maximum heart rate.
+# 2. Age vs Resting Blood Pressure
+The scatter plot shows a slight upward trend between age and resting blood pressure. The Pearson correlation coefficient of 0.2711 indicates a weak positive relationship. This suggests that resting blood pressure tends to increase slightly with age.
 
-The scatter plot shows a general downward pattern, suggesting that older individuals in the dataset tend to have lower maximum heart rate values.
-
-The correlation is statistically significant (p < 0.001).
-
-### 2. Age vs Resting Blood Pressure
-
-**Correlation coefficient: 0.2711**
-
-The results show a weak positive relationship between age and resting blood pressure.
-
-The scatter plot indicates a slight upward trend, suggesting that resting blood pressure tends to increase with age in this dataset. However, the relationship is relatively weak.
-
-The correlation is statistically significant (p < 0.001).
-
-### 3. Age vs Cholesterol
-
-**Correlation coefficient: 0.2198**
-
-The analysis shows a weak positive relationship between age and cholesterol levels.
-
-The scatter plot suggests a slight upward pattern, although the points are widely spread. This indicates that age alone does not strongly explain differences in cholesterol levels.
-
-The correlation is statistically significant (p < 0.001).
-
-
-## Visualisations
-
-### Age vs Maximum Heart Rate
-
-![Age vs Maximum Heart Rate](images/age_max_heart_rate.png)
-
-The downward pattern illustrates the negative relationship between age and maximum heart rate.
-
-### Age vs Resting Blood Pressure
-
-![Age vs Resting Blood Pressure](images/age_resting_blood_pressure.png)
-
-The slight upward pattern illustrates the weak positive relationship between age and resting blood pressure.
-
-### Age vs Cholesterol
-
-![Age vs Cholesterol](images/age_cholesterol.png)
-
-The scatter plot shows a weak positive relationship between age and cholesterol, with considerable variation between observations.
+# 3. Age vs Cholesterol
+The scatter plot shows a slight upward pattern between age and cholesterol levels. The Pearson correlation coefficient of 0.2198 indicates a weak positive relationship. However, the wide spread of points suggests that age alone does not strongly explain cholesterol levels.
 
 ## Conclusion
 
 The analysis identified different relationships between age and three health-related measurements. The strongest relationship was between age and maximum heart rate, which showed a moderate negative correlation. Resting blood pressure and cholesterol both showed weak positive correlations with age. Although the correlation tests were statistically significant, the regression results showed that these variables alone explained only a limited proportion of the variation.
 
-Overall, this project demonstrates the use of R for data exploration, statistical analysis, correlation, linear regression and data visualisation.
+Overall, this project demonstrates the use of R for data exploration, statistical analysis, correlation and data visualisation.
 
 ## Dataset
 
