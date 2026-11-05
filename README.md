@@ -30,6 +30,7 @@ The project involved:
 
 # 1. Age vs Maximum Heart Rate
 The scatter plot shows a downward trend between age and maximum heart rate. This is supported by a Pearson correlation coefficient of -0.3902, indicating a moderate negative relationship. This suggests that older individuals in the dataset generally tend to have lower maximum heart rates.
+![Maximum Heart Rate](images/thalach.png)
 
 # 2. Age vs Resting Blood Pressure
 The scatter plot shows a slight upward trend between age and resting blood pressure. The Pearson correlation coefficient of 0.2711 indicates a weak positive relationship. This suggests that resting blood pressure tends to increase slightly with age.
