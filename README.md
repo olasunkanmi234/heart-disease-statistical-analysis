@@ -6,12 +6,6 @@ This project explores a heart disease dataset using R and statistical techniques
 
 The dataset contains **1,025 observations and 14 variables**.
 
-![Maximum Heart Rate](images/thalach.png)
-
-![Resting Blood Pressure](images/trestbps.png)
-
-![Cholesterol](images/chol.png)
-
 ## Tools and Technologies
 
 - R
@@ -40,9 +34,11 @@ The scatter plot shows a downward trend between age and maximum heart rate. This
 
 # 2. Age vs Resting Blood Pressure
 The scatter plot shows a slight upward trend between age and resting blood pressure. The Pearson correlation coefficient of 0.2711 indicates a weak positive relationship. This suggests that resting blood pressure tends to increase slightly with age.
+![Resting Blood Pressure](images/trestbps.png)
 
 # 3. Age vs Cholesterol
 The scatter plot shows a slight upward pattern between age and cholesterol levels. The Pearson correlation coefficient of 0.2198 indicates a weak positive relationship. However, the wide spread of points suggests that age alone does not strongly explain cholesterol levels.
+![Cholesterol](images/chol.png)
 
 ## Conclusion
 
