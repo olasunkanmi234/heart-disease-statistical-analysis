@@ -34,6 +34,7 @@ I found a downward trend between age and maximum heart rate. This is supported b
 
 ### 2. Age vs Resting Blood Pressure
 I observed a slight upward trend between age and resting blood pressure. The Pearson correlation coefficient of 0.2711 indicates a weak positive relationship. This suggests that resting blood pressure tends to increase slightly with age.
+
 ![Resting Blood Pressure](images/trestbps.png)
 
 ### 3. Age vs Cholesterol
